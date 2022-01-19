@@ -3,23 +3,23 @@ import { OnibusService } from '../services/onibus.service';
 import Swal from 'sweetalert2'
 
 @Component({
-  selector: 'app-listar-onibus',
-  templateUrl: './listar-onibus.component.html',
-  styleUrls: ['./listar-onibus.component.scss']
+  selector: 'app-lista-lotacao',
+  templateUrl: './lista-lotacao.component.html',
+  styleUrls: ['./lista-lotacao.component.scss']
 })
-export class ListarOnibusComponent implements OnInit {
-  bus: any;
-  textFilter: any;
+export class ListaLotacaoComponent implements OnInit {
+  lotacao: any;
   p: number = 1;
 
   constructor(private busService: OnibusService) { }
 
   ngOnInit(): void {
-    this.getBuslines();
+    this.getBuslines()
   }
+
   getBuslines() {
-    this.busService.getBusLines().subscribe(result => {
-      this.bus = result
+    this.busService.getLotacaoLines().subscribe(result => {
+      this.lotacao = result
       Swal.fire(
         'Sucesso!',
         'Dados carregados!',

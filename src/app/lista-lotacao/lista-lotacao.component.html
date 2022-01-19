@@ -1,10 +1,9 @@
 
-<h1 class="text-center">Linhas de Onibus</h1>
-
+<h1 class="text-center">Linhas de Lotacao</h1>
 
 <div class="col-lg-6 tabela">
     <div class="input-group">
-        <input type="text" class="form-control" placeholder="Linha de Onibus">
+        <input type="text" class="form-control" placeholder="Linha de Lotacao">
         <span class="input-group-btn">
             <button class="btn btn-default" type="button">Pesquisar</button>
         </span>
@@ -22,7 +21,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let item of bus | paginate: { itemsPerPage: 10, currentPage: p }">
+            <tr *ngFor="let item of lotacao | paginate: { itemsPerPage: 10, currentPage: p }">
 
                 <td>{{item.id}}</td>
                 <td>{{item.codigo}}</td>
