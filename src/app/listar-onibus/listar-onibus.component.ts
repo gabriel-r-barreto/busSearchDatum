@@ -24,7 +24,14 @@ export class ListarOnibusComponent implements OnInit {
         'Sucesso!',
         'Dados carregados!',
         'success'
-      ) 
+      )
+    }, error => {
+      console.log(error.error.text);
+      Swal.fire(
+        'Erro!',
+        error.error.text,
+        'error'
+      )
     })
   }
 
